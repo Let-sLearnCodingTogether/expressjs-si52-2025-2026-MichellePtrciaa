@@ -1,5 +1,5 @@
 import express from "express"
-import * as profileController  from"../controller/profileController"
+import * as profileController  from"../controller/profileController.js"
 
 const web = express.Router()
 
