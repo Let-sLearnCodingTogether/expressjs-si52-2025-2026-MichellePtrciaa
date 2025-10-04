@@ -4,22 +4,26 @@ const UserSchema = new mongoose.Schema(
     {
         username : {
             type : String,
-            require : [true, "Username wajib di isi !"],
+            required : [true, "Username wajib di isi !"],
             unique : true,
             trim : true
         },
         email : {
             type : String,
-            require : [true, "Email wajib di isi !"],
+            required : [true, "Email wajib di isi !"],
             unique : true,
             trim : true
         },
         password : {
             type : String,
-            require : [true, "Password wajib di isi !"],
+            required : [true, "Password wajib di isi !"]
         }
     },
     {
         timestamps : true /*ini untuk buat schema mongoose*/
     }
 )
+
+const UserModel = new mongoose.model("user", UserSchema)
+
+export default UserModel

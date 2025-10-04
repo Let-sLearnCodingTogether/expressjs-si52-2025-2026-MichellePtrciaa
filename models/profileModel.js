@@ -16,13 +16,16 @@ const ProfileSchema = new mongoose.Schema(
         },
         bio : {
             type : String,
+            minLength : [10, "Minimal 10 karakter"],
+            maxLength : [150, "Maksimal 150 karakter"],
             required : [true, "Silakan masukkan bio anda "],
             unique : true,
             trim : true
         },
         user : {
-            type : user,
-            required : [true, ""]
+            type : mongoose.Schema.Types.ObjectId,
+            ref : "User",
+            required : true
         }
     },
     {
