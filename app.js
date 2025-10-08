@@ -15,10 +15,6 @@ app.use(web)
 
 app.use("/api", api)
 
-app.get('/', () => {
-
-})
-
 app.listen(3000, () => {
     database()
     console.log('Aplikasi berjalan di https://localhost:3000');
